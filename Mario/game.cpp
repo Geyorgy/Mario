@@ -3,8 +3,8 @@
 
 using namespace sf;
 
-float offsetX = 0;		//Сдвиг по Х (чтобы камера следовала за Марио)
-float offsetY = 0;		//Сдвиг по Y
+float offsetX = 0;		//Sdvig po X(dlya privyazki kameri)
+float offsetY = 0;		//Sdvig po Y
 
 const int H = 16;
 const int W = 56;
@@ -29,7 +29,7 @@ String TileMap[H] = {
 "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
 "GGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGGG",
 
-}; //Карта в виде массива
+}; //Karta v vide massiva
 
 class Player {
 public:
@@ -64,7 +64,7 @@ public:
 
 		if (dx > 0)
 		{
-			marioSprite.setTextureRect(IntRect((80 + 17 * int(currentFrame)), 1, 16, 32));  //Анимация
+			marioSprite.setTextureRect(IntRect((80 + 17 * int(currentFrame)), 1, 16, 32));  //Animaciya
 		}
 
 		if (dx < 0)
@@ -72,7 +72,7 @@ public:
 			marioSprite.setTextureRect(IntRect((96 + 17 * int(currentFrame)), 1, -16, 32));
 		}
 
-		currentFrame += 0.000007*time;   //Скорость анимации
+		currentFrame += 0.000007*time;   //Skorost' animacii
 
 		if (currentFrame > 4)
 			currentFrame = 0;
@@ -83,7 +83,7 @@ public:
 	}
 
 	void Interaction(bool dir) {
-		for (int i = marioCoordinates.top / 16; i < (marioCoordinates.top + marioCoordinates.height) / 16; i++)			//Проверка только по координатам, корорые задевает спрайт Марио
+		for (int i = marioCoordinates.top / 16; i < (marioCoordinates.top + marioCoordinates.height) / 16; i++)			//Proverka tol'ko po koordinatam, kotorie zadevaet sprite Mario
 			for (int j = marioCoordinates.left / 16; j < (marioCoordinates.left + marioCoordinates.width) / 16; j++)
 			{
 				if ((TileMap[i][j] == 'B') || (TileMap[i][j] == 'G') || (TileMap[i][j] == 'Z'))
@@ -133,7 +133,7 @@ int main() {
 
 
 
-	Clock lastTick;			//Переменная засекающая время с последнего такта процессора
+	Clock lastTick;			//Peremennaya zasekaet vremya s poslednego takta processora
 	
 	while (window.isOpen()) {
 		float time = lastTick.getElapsedTime().asMicroseconds();
@@ -162,16 +162,16 @@ int main() {
 
 		mario.move(time);
 
-		if ((mario.marioCoordinates.left > 341 / 2) && (mario.marioCoordinates.left < 41*16))	//Проверка на край карты по Х
+		if ((mario.marioCoordinates.left > 341 / 2) && (mario.marioCoordinates.left < 41*16))	//Proverka na krai karti po X
 			offsetX = mario.marioCoordinates.left - 341 / 2;
 
-		if ((mario.marioCoordinates.top > 192 / 2) && (mario.marioCoordinates.top < 5*16))		//по Y
+		if ((mario.marioCoordinates.top > 192 / 2) && (mario.marioCoordinates.top < 5*16))		//po Y
 			offsetY = mario.marioCoordinates.top - 192 / 2;
 
 
 		window.clear(Color(99, 173, 255));
 
-		for (int i = 0; i < H; i++)					//Вывод спрайтов
+		for (int i = 0; i < H; i++)					//Vivod spraitov
 			for (int j = 0; j < W; j++)
 			{
 				if (TileMap[i][j] == 'G') TileSprite.setTextureRect(IntRect(0, 0, 16, 16));
