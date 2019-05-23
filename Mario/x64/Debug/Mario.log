@@ -1,0 +1,4 @@
+﻿  main.cpp
+c:\users\1\source\repos\mario\mario\main.cpp(40): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\1\source\repos\mario\mario\main.cpp(73): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+  Mario.vcxproj -> C:\Users\1\source\repos\Mario\x64\Debug\Mario.exe
