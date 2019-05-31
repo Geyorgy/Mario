@@ -53,24 +53,27 @@ public:
 		marioCoordinates.left += dx * time;
 		Interaction(0);
 
-		if (!onGround) 
+		if (!onGround)
 			dy = dy + 0.000000001*time;
 
-		marioCoordinates.top += 2*dy * time;
+		marioCoordinates.top += 2 * dy * time;
 		onGround = false;
 		Interaction(1);
 
 
 
-		if (dx > 0)
-		{
+		if (dx > 0) {
 			marioSprite.setTextureRect(IntRect((80 + 17 * int(currentFrame)), 1, 16, 32));  //Animaciya
 		}
 
-		if (dx < 0)
-		{
+		if (dx < 0) {
 			marioSprite.setTextureRect(IntRect((96 + 17 * int(currentFrame)), 1, -16, 32));
 		}
+
+		if ((dx > -0.00002) && (dx < 0.00002)) {
+			marioSprite.setTextureRect(IntRect(80, 1, 16, 32));
+		}
+
 
 		currentFrame += 0.000007*time;   //Skorost' animacii
 
@@ -78,7 +81,7 @@ public:
 			currentFrame = 0;
 
 
-		marioSprite.setPosition(marioCoordinates.left - offsetX, marioCoordinates.top - offsetY);	
+		marioSprite.setPosition(marioCoordinates.left - offsetX, marioCoordinates.top - offsetY);
 		dx = 0;
 	}
 

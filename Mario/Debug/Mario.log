@@ -1,31 +1,30 @@
 ﻿D:\Microsoft Visual Studio\2017\Community\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets(391,5): warning MSB8028: промежуточный каталог (Debug\) содержит файлы, которые используются совместно с другим проектом (Mario.vcxproj).  Это может привести к ошибкам очистки и перестроения.
   game.cpp
-d:\test\mario\mario\game.cpp(57): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-d:\test\mario\mario\game.cpp(75): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-d:\test\mario\mario\game.cpp(86): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+d:\gitrepositories\mario\mario\game.cpp(57): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+d:\gitrepositories\mario\mario\game.cpp(78): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+d:\gitrepositories\mario\mario\game.cpp(89): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float
           ]
-d:\test\mario\mario\game.cpp(87): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
+d:\gitrepositories\mario\mario\game.cpp(90): warning C4244: инициализация: преобразование "T" в "int", возможна потеря данных
           with
           [
               T=float
           ]
-d:\test\mario\mario\game.cpp(95): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+d:\gitrepositories\mario\mario\game.cpp(98): warning C4244: =: преобразование "int" в "T", возможна потеря данных
           with
           [
               T=float
           ]
-d:\test\mario\mario\game.cpp(104): warning C4244: =: преобразование "int" в "T", возможна потеря данных
+d:\gitrepositories\mario\mario\game.cpp(107): warning C4244: =: преобразование "int" в "T", возможна потеря данных
           with
           [
               T=float
           ]
-d:\test\mario\mario\game.cpp(139): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
-d:\test\mario\mario\game.cpp(149): warning C4305: =: усечение из "double" в "float"
-d:\test\mario\mario\game.cpp(153): warning C4305: =: усечение из "double" в "float"
-d:\test\mario\mario\game.cpp(158): warning C4305: =: усечение из "double" в "float"
-d:\test\mario\mario\game.cpp(197): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-  LINK : не найден или не выполнена сборка D:\test\Mario\Debug\NedoMario.exe при последней инкрементной компоновке; выполняется полная компоновка
-  Mario.vcxproj -> D:\test\Mario\Debug\NedoMario.exe
+d:\gitrepositories\mario\mario\game.cpp(142): warning C4244: инициализация: преобразование "sf::Int64" в "float", возможна потеря данных
+d:\gitrepositories\mario\mario\game.cpp(152): warning C4305: =: усечение из "double" в "float"
+d:\gitrepositories\mario\mario\game.cpp(156): warning C4305: =: усечение из "double" в "float"
+d:\gitrepositories\mario\mario\game.cpp(161): warning C4305: =: усечение из "double" в "float"
+d:\gitrepositories\mario\mario\game.cpp(200): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+  Mario.vcxproj -> D:\GitRepositories\Mario\Debug\NedoMario.exe
